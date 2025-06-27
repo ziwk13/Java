@@ -35,7 +35,5 @@ public class IfEx {
 			grade = 'F';
 		}
 		System.out.println(score + "점은 " + grade + "학점 입니다.");
-
 	}
-
 }

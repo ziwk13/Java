@@ -32,10 +32,26 @@ public class OneDimensionEx {
 		String[] backEnd;
 		backEnd = new String[] {"MYSQL", "JAVA", "JSP/SERVLET", "SPRING"};
 		System.out.println(Arrays.toString(backEnd));
-		
+
+
 		String[] soju = {"새로", "거꾸로", "가로", "똑바로" };
-		
 		System.out.println(Arrays.toString(soju)+ "주세요");
+		
+		// 배열 순회하기 (일반 for문, 향상된 for문)
+		
+		String[] hobbies = new String[] { "travel", "game", "coding" };
+		
+		// 일반 for문
+		for(int i = 0; i < hobbies.length; i++) {
+			System.out.print(hobbies[i] + ", ");
+		}
+		System.out.println();
+		
+		// 향상 for문 (Enhanced for)
+		for(String hobby : hobbies) {
+			System.out.print(hobby + ", ");
+		}
+		System.out.println();
 	}
 
 }

@@ -5,7 +5,7 @@ import javax.security.auth.x500.X500Principal;
 public class WhileEx {
 
 	public static void main(String[] args) {
-		
+
 		// 1 ~ 100 누적 하기
 		int total = 0;
 		int x = 0;
@@ -13,7 +13,7 @@ public class WhileEx {
 			total += ++x;
 		}
 		System.out.println(total);
-		
+
 		// 1 ~ 100 홀수만 누적하기
 		int oddTotal = 0;
 		int odd = 1;
@@ -22,7 +22,7 @@ public class WhileEx {
 			odd += 2;
 		}
 		System.out.println(oddTotal);
-		
+
 		// 1 ~ 100 짝수만 누적 하기
 		int evenTotal = 0;
 		int even = 1;
@@ -34,6 +34,4 @@ public class WhileEx {
 		}
 		System.out.println(evenTotal);
 	}
-	
-
 }

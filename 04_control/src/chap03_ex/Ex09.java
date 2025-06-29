@@ -12,8 +12,15 @@ public class Ex09 {
     // ...
     // 2x9=18 3x9=27 ...  9x9=81 
     
-    
-
+	  int result = 1;
+	  
+	  for (int i = 1; i <= 9; i++) {
+		  for(int j = 2; j <= 9; j++) {
+			  System.out.print(j + "x" + result + "=" + (j * result) + " ");
+		  }
+		  result++;
+		  System.out.println();
+	  }
   }
 
 }

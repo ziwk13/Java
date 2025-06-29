@@ -13,6 +13,14 @@ public class Ex05 {
     // 3회 모금액 210원
     // ...
     // 1429회 모금액 100030원
+	  
+	  int money = 90;
+	  int total = 0;
+	  
+	  for(int i = 1; total <= 100000; i++) {
+		  total += money;
+		  System.out.println(i + "회 모금액" + total + "원");
+	  }
     
     
 

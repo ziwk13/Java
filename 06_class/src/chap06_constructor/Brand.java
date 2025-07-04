@@ -8,7 +8,7 @@ package chap06_constructor;
  * 	  2) Getter의 이름은 "get + 필드" 또는 "is + 필드"
  * 2. Setter
  *    1) 인자를 받아서 필드에 저장하는 메소드 이다.
- *    2) Setter의 이름은 "set + 필드" 규칙을 따른다.ㅁ
+ *    2) Setter의 이름은 "set + 필드" 규칙을 따른다.
  */
 
 public class Brand {

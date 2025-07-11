@@ -13,7 +13,7 @@ public class Judge extends Person {
 			if(user_1.charAt(i) == score.charAt(i)) {
 				strike++;
 			}
-			if(user_1.contains(score.charAt(i) + "")) {
+			else if(user_1.substring(i, user_1.length()).contains(score.charAt(i) + "")) {
 				ball++;
 			}
 		} return "";

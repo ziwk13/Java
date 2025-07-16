@@ -12,10 +12,9 @@ public class Main {
 		int k = 3;
 		int[] answer = new int[n];
 		
-		for(int i = 1; i <= n - 1; i++) {
-			answer[i] += k * i;
+		for(int i = 0; i <= n - 1; i++) {
+				answer[i] += k * i;
+			System.out.println(answer[i]);
 		}
-		System.out.println(answer);
 	}
-
 }

@@ -39,10 +39,45 @@ public class ArrayList {
 		}
 		arr = newArr;
 	}
+	@Override
+	public String toString() {
+		return arr.toString();
+	}
 	public int size() {
 		return index;
 	}
 	public int arrLengthSize() {
 		return arr.length;
+	}
+	public int get(int index) {
+		if(this.index <= index) {
+			throw new ArrayIndexOutOfBoundsException("이거 오류임 ㅇㅇ");
+		}
+		return arr[index];  // 인덱스를 받아서 해당 인덱스의 요소를 반환
+	}
+	public void trimToSize() {
+		if(!isExists() || index == arr.length) return;
+		int[] newArr = new int[index];
+		for(int i = 0; i < index; i++) {
+			newArr[i] = arr[i];
+		}
+		arr = newArr;
+	}
+	public void clear() {
+		arr = null;
+		index = 0;
+	}
+	public boolean isEmpty() {
+		if(index == 0 || isExists()) {
+			return true;
+		} else return false;
+	}
+	public int remove(int index) {
+		int removeValue = arr[index];
+		for(int i = index; i < this.index - 1; i++) {
+			arr[i] = arr[i + 1];
+		}
+		this.index--;
+		return removeValue;
 	}
 }

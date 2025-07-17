@@ -6,27 +6,16 @@ public class Main {
 		
 		
 		
-		ArrayList arrayList = new ArrayList();
-		
+		ArrayList list = new ArrayList();
 
-		System.out.println(arrayList.add(5));
-		System.out.println(arrayList.add(5));
-		System.out.println(arrayList.add(5));
-		System.out.println(arrayList.add(7));
-		System.out.println(arrayList.add(5));
-		System.out.println(arrayList.add(3));
-		System.out.println(arrayList.add(10));
-		System.out.println(arrayList.add(10));
-		System.out.println(arrayList.add(10));
-		System.out.println(arrayList.add(10));
-		System.out.println(arrayList.add(10));
-		System.out.println(arrayList.add(28));
-		System.out.println(arrayList.add(28));
-		System.out.println(arrayList.add(28));
-		System.out.println(arrayList.add(5));
-		System.out.println(arrayList.add(5));
-		System.out.println(arrayList.size());
-		System.out.println(arrayList.arrLengthSize());
+		list.add(1);
+		System.out.println(list);
+		list.add(1);list.add(1);list.add(1);list.add(1);
+		list.add(1);list.add(1);list.add(1);list.add(1);
+		list.add(1);list.add(1);
+		System.out.println(list);
+		list.trimToSize();
+		System.out.println(list);
 	}
 
 }

@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class ArrayList<T> extends List<T>{
 
 	private Object[] arr;
-	private int index;
 
 	@Override
 	public boolean add(T i) {
@@ -15,9 +14,10 @@ public class ArrayList<T> extends List<T>{
 		if(isFull()) {
 			sizeUp();
 		}
-		int old = index;
-		arr[index++] = i;
-		if(old + 1 == index) {
+		int old = getIndex();
+		arr[getIndex()] = i;
+		setIndex(getIndex() + 1);
+		if(old + 1 == getIndex()) {
 			return true;
 		}
 		return false;
@@ -29,7 +29,7 @@ public class ArrayList<T> extends List<T>{
 		} else return false;
 	}
 	private boolean isFull() {
-		if(arr.length == index) {
+		if(arr.length == getIndex()) {
 			return true;
 		}
 		return false;
@@ -42,35 +42,35 @@ public class ArrayList<T> extends List<T>{
 		arr = newArr;
 	}
 	public void trimToSize() {
-		if(!isExists() || index == arr.length) return;
-		Object[] newArr = new Object[index];
-		for(int i = 0; i < index; i++) {
+		if(!isExists() || getIndex() == arr.length) return;
+		Object[] newArr = new Object[getIndex()];
+		for(int i = 0; i < getIndex(); i++) {
 			newArr[i] = arr[i];
 		}
 		arr = newArr;
 	}
 	public void clear() {
 		arr = null;
-		index = 0;
+		setIndex(0);
 	}
 	@Override
 	public boolean isEmpty() {
-		if(index == 0 || isExists()) {
+		if(getIndex() == 0 || isExists()) {
 			return true;
 		} else return false;
 	}
 	@Override
 	public T remove(int index) {
 		T removeValue = (T)arr[index];
-		for(int i = index; i < this.index - 1; i++) {
+		for(int i = index; i < getIndex() - 1; i++) {
 			arr[i] = arr[i + 1];
 		}
-		this.index--;
+		setIndex(getIndex() - 1);
 		return removeValue;
 	}
 	@Override
 	public T get(int index) {
-		if(this.index <= index) {
+		if(getIndex() <= index) {
 			throw new ArrayIndexOutOfBoundsException("이거 오류임 ㅇㅇ");
 		}
 		return (T)arr[index];  // 인덱스를 받아서 해당 인덱스의 요소를 반환
